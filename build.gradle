@@ -1,0 +1,25 @@
+plugins {
+    id 'net.saliman.cobertura' version '2.2.5'
+}
+
+apply plugin: 'java'
+apply plugin: 'cobertura'
+
+sourceCompatibility = 1.7
+version = '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+cobertura {
+    coverageFormats = ['html']
+    coverageIgnoreTrivial = true
+    coverageReportDir = new File("$buildDir/reports/cobertura")
+}
+
+test.finalizedBy(project.tasks.cobertura)
