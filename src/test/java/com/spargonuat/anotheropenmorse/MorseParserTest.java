@@ -16,4 +16,11 @@ public class MorseParserTest {
         List<MorseCode> morseCharList = Arrays.asList(MorseCode.F, MorseCode.O, MorseCode.O);
         assertThat(MorseParser.parseString(englishString), is(morseCharList));
     }
+
+    @Test
+    public void shouldParseAnEnglishStringContainingSpaces() {
+        String englishString = "F B";
+        List<MorseCode> expectedMorseCharList = Arrays.asList(MorseCode.F, MorseCode.SPACE, MorseCode.B);
+        assertThat(MorseParser.parseString(englishString), is(expectedMorseCharList));
+    }
 }
