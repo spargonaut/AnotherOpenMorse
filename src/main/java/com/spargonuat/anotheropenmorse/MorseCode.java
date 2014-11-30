@@ -5,6 +5,16 @@ import java.util.List;
 
 public enum MorseCode {
 
+    ZERO ("-----", '0', Arrays.asList(MorseChar.DASH, MorseChar.DASH, MorseChar.DASH, MorseChar.DASH, MorseChar.DASH)),
+    ONE (".----", '1', Arrays.asList(MorseChar.DOT, MorseChar.DASH, MorseChar.DASH, MorseChar.DASH, MorseChar.DASH)),
+    TWO ("..---", '2', Arrays.asList(MorseChar.DOT, MorseChar.DOT, MorseChar.DASH, MorseChar.DASH, MorseChar.DASH)),
+    THREE ("...--", '3', Arrays.asList(MorseChar.DOT, MorseChar.DOT, MorseChar.DOT, MorseChar.DASH, MorseChar.DASH)),
+    FOUR ("....-", '4', Arrays.asList(MorseChar.DOT, MorseChar.DOT, MorseChar.DOT, MorseChar.DOT, MorseChar.DASH)),
+    FIVE (".....", '5', Arrays.asList(MorseChar.DOT, MorseChar.DOT, MorseChar.DOT, MorseChar.DOT, MorseChar.DOT)),
+    SIX ("-....", '6', Arrays.asList(MorseChar.DASH, MorseChar.DOT, MorseChar.DOT, MorseChar.DOT, MorseChar.DOT)),
+    SEVEN ("--...", '7', Arrays.asList(MorseChar.DASH, MorseChar.DASH, MorseChar.DOT, MorseChar.DOT, MorseChar.DOT)),
+    EIGHT ("---..", '8', Arrays.asList(MorseChar.DASH, MorseChar.DASH, MorseChar.DASH, MorseChar.DOT, MorseChar.DOT)),
+    NINE ("----.", '9', Arrays.asList(MorseChar.DASH, MorseChar.DASH, MorseChar.DASH, MorseChar.DASH, MorseChar.DOT)),
     A (".-", 'A', Arrays.asList(MorseChar.DOT, MorseChar.DASH)),
     B ("-...", 'B', Arrays.asList(MorseChar.DASH, MorseChar.DOT, MorseChar.DOT, MorseChar.DOT)),
     C ("-.-.", 'C', Arrays.asList(MorseChar.DASH, MorseChar.DOT, MorseChar.DASH, MorseChar.DOT)),

@@ -2,6 +2,7 @@ package com.spargonuat.anotheropenmorse;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -22,5 +23,12 @@ public class MorseParserTest {
         String englishString = "F B";
         List<MorseCode> expectedMorseCharList = Arrays.asList(MorseCode.F, MorseCode.SPACE, MorseCode.B);
         assertThat(MorseParser.parseString(englishString), is(expectedMorseCharList));
+    }
+
+    @Test
+    public void shouldParseAnEnglighStringContainingNumbers() {
+        String numberString = "123";
+        List<MorseCode> expectedMorseCodeList = Arrays.asList(MorseCode.ONE, MorseCode.TWO, MorseCode.THREE);
+        assertThat(MorseParser.parseString(numberString), is(expectedMorseCodeList));
     }
 }
