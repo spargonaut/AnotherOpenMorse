@@ -11,6 +11,6 @@ public class MorseCharTest {
     public void shouldGetUnitDurationMilliseconds() throws Exception {
         int unitDurationInMilliseconds = 200;
         int expectedDurationForDashInMilliseconds = 600;
-        assertThat(MorseChar.DASH.getUnitDurationMilliseconds(unitDurationInMilliseconds), is(expectedDurationForDashInMilliseconds));
+        assertThat(MorseChar.DASH.getCharDurationMilliseconds(unitDurationInMilliseconds), is(expectedDurationForDashInMilliseconds));
     }
 }

@@ -19,7 +19,7 @@ public enum MorseChar {
         return character;
     }
 
-    public int getUnitDurationMilliseconds(int unitDurationMilliseconds) {
+    public int getCharDurationMilliseconds(int unitDurationMilliseconds) {
         return unitDurationMilliseconds * durationUnits;
     }
 }
