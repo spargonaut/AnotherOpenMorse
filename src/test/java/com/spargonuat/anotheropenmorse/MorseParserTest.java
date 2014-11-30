@@ -31,4 +31,11 @@ public class MorseParserTest {
         List<MorseCode> expectedMorseCodeList = Arrays.asList(MorseCode.ONE, MorseCode.TWO, MorseCode.THREE);
         assertThat(MorseParser.parseString(numberString), is(expectedMorseCodeList));
     }
+
+    @Test
+    public void shouldParseEnglishStringsContainingLowerCaseLetters() {
+        String englishString = "Ping";
+        List<MorseCode> expectedMorseCharList = Arrays.asList(MorseCode.P, MorseCode.I, MorseCode.N, MorseCode.G);
+        assertThat(MorseParser.parseString(englishString), is(expectedMorseCharList));
+    }
 }

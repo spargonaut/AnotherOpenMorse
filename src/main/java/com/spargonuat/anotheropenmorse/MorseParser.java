@@ -12,7 +12,7 @@ public class MorseParser {
             } else if (Character.isDigit(characterString)) {
                 morseCharList.add(parseNumber(characterString));
             } else {
-                morseCharList.add(MorseCode.valueOf(characterString.toString()));
+                morseCharList.add(MorseCode.valueOf(characterString.toString().toUpperCase()));
             }
         }
         return morseCharList;
