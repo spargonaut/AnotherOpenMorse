@@ -38,4 +38,11 @@ public class MorseParserTest {
         List<MorseCode> expectedMorseCharList = Arrays.asList(MorseCode.P, MorseCode.I, MorseCode.N, MorseCode.G);
         assertThat(MorseParser.parseString(englishString), is(expectedMorseCharList));
     }
+
+    @Test
+    public void shouldParseEnglishStringToMorseString() {
+        String englishString = "Tux";
+        String expectedMorseString = "-..--..-";
+        assertThat(MorseParser.parseToMorseString(englishString), is(expectedMorseString));
+    }
 }

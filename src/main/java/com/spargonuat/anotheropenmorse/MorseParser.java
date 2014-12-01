@@ -60,4 +60,14 @@ public class MorseParser {
         }
         return morseCharacter;
     }
+
+    public static String parseToMorseString(String englishString) {
+        List<MorseCode> morseCodeString = parseString(englishString);
+        StringBuilder morseStringBuilder = new StringBuilder();
+        for (MorseCode morseCode : morseCodeString) {
+            morseStringBuilder.append(morseCode.getMorseString());
+        }
+
+        return morseStringBuilder.toString();
+    }
 }
