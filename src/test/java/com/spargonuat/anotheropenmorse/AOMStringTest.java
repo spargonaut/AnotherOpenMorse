@@ -10,8 +10,6 @@ import static org.junit.Assert.*;
 
 public class AOMStringTest {
 
-
-
     @Test
     public void shouldCreateAFullyPopulatedOMStringObjectWhenGivenOnlyAnEnglishString() {
 
@@ -20,7 +18,7 @@ public class AOMStringTest {
         String expectedMorseString = "-....-.-.";
         List<MorseCode> expectedMorseCodeString = Arrays.asList(MorseCode.B, MorseCode.A, MorseCode.R);
 
-        AOMString.Builder aomsBuilder = new AOMString.Builder();
+        AOMString.Builder aomsBuilder = new AOMString.Builder(englishString);
         aomsBuilder.setEnglishString(englishString);
         AOMString aomString = aomsBuilder.build();
 

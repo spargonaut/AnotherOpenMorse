@@ -45,4 +45,11 @@ public class MorseParserTest {
         String expectedMorseString = "-..--..-";
         assertThat(MorseParser.parseToMorseString(englishString), is(expectedMorseString));
     }
+
+    @Test
+    public void shouldBeAbleToGetAMorseStringFromAMorseCodeList() {
+        List<MorseCode> morseCharList = Arrays.asList(MorseCode.FIVE, MorseCode.O, MorseCode.H);
+        String expectedMorseString = ".....---....";
+        assertThat(MorseParser.getMorseString(morseCharList), is(expectedMorseString));
+    }
 }

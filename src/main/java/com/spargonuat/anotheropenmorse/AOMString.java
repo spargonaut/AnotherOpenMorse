@@ -31,8 +31,10 @@ public class AOMString {
         private String morseString;
         private List<MorseCode> morseCodeString;
 
-        public Builder() {
-
+        public Builder(String englishString) {
+            this.englishString = englishString;
+            morseCodeString = MorseParser.parseString(englishString);
+            morseString = MorseParser.getMorseString(morseCodeString);
         }
 
         public Builder setEnglishString(String englishString) {
@@ -43,6 +45,7 @@ public class AOMString {
         public AOMString build() {
             if (morseCodeString == null) {
                 morseCodeString = MorseParser.parseString(englishString);
+                morseString = MorseParser.getMorseString(morseCodeString);
             }
             if (morseString == null) {
                 morseString = MorseParser.parseToMorseString(englishString);

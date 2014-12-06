@@ -70,4 +70,13 @@ public class MorseParser {
 
         return morseStringBuilder.toString();
     }
+
+    public static String getMorseString(List<MorseCode> morseList) {
+        StringBuilder morseStringBuilder = new StringBuilder();
+        for (MorseCode morseCode : morseList) {
+            morseStringBuilder.append(morseCode.getMorseString());
+        }
+
+        return morseStringBuilder.toString();
+    }
 }
