@@ -17,7 +17,7 @@ dependencies {
 }
 
 cobertura {
-    coverageFormats = ['html']
+    coverageFormats = ['html', 'xml']
     coverageIgnoreTrivial = true
     coverageReportDir = new File("$buildDir/reports/cobertura")
 }
